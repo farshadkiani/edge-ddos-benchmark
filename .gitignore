@@ -1,0 +1,19 @@
+# پوشه‌های محیط مجازی و کش پایتون
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# دیتاست‌ها و مدل‌های سنگین
+*.csv
+*.pkl
+*.zip
+
+# مسدود کردن عکس‌ها فقط در صورتی که داخل src بیفتند
+src/**/*.png
+src/**/*.webp
+src/**/*.jpg
+src/**/*.json
+
