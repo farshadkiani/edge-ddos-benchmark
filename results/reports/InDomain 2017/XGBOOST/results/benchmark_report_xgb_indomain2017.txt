@@ -1,0 +1,19 @@
+=== XGBOOST REAL-TIME BENCHMARK REPORT ===
+              precision    recall  f1-score   support
+
+      BENIGN       0.99      0.96      0.98     33777
+        DDoS       0.90      0.96      0.93     11366
+
+    accuracy                           0.96     45143
+   macro avg       0.94      0.96      0.95     45143
+weighted avg       0.96      0.96      0.96     45143
+
+MCC: 0.905076
+ROC-AUC: 0.989285
+
+=== LATENCY (Batch Size = 1, Pure Inference) ===
+Mean Latency: 0.6464 ms
+P50 (Median): 0.6008 ms
+P95: 0.8990 ms
+P99: 1.3077 ms
+Throughput: 1547.10 samples/sec

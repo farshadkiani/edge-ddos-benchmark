@@ -1,0 +1,45 @@
+{
+    "model": "XGBoost",
+    "dataset": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+    "model_path": "results/xgboost_attack_detector.pkl",
+    "evaluation_protocol": {
+        "batch_size": 1,
+        "latency_scope": "pure_model_inference",
+        "feature_extraction_in_latency": false,
+        "preprocessing_in_latency": false,
+        "inference_in_latency": true,
+        "warmup_samples": 100,
+        "number_of_evaluated_samples": 45143
+    },
+    "classification_metrics": {
+        "accuracy": 0.9631393571539331,
+        "precision": 0.900578034682081,
+        "recall": 0.9595284180890374,
+        "f1_score": 0.9291191003578122,
+        "mcc": 0.9050763001572348,
+        "roc_auc": 0.989284776062076
+    },
+    "latency_metrics_ms": {
+        "mean": 0.6463694122233655,
+        "median": 0.6008089999909316,
+        "p50": 0.6008089999909316,
+        "p90": 0.783260400044128,
+        "p95": 0.8989539999788576,
+        "p99": 1.3077123999869404,
+        "min": 0.553746000036881,
+        "max": 11.623231000044143,
+        "std": 0.2135780771279083
+    },
+    "resource_metrics": {
+        "peak_rss_mb": 249.0078125,
+        "average_cpu_percent": 25.69704797047971,
+        "peak_cpu_percent": 54.3
+    },
+    "throughput_samples_per_second": 1547.1029121879776,
+    "confusion_matrix": {
+        "TN": 32573,
+        "FP": 1204,
+        "FN": 460,
+        "TP": 10906
+    }
+}

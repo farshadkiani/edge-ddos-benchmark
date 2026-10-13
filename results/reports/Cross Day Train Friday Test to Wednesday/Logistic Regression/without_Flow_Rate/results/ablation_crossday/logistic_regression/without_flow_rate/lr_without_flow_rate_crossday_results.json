@@ -1,0 +1,58 @@
+{
+    "experiment": {
+        "model": "Logistic Regression",
+        "study": "Cross-Day Ablation (without Flow_Rate)",
+        "removed_feature": "Flow_Rate",
+        "ablation_name": "without_flow_rate",
+        "features_used": [
+            "Packet_Count",
+            "Packet_Size",
+            "Flow_Duration"
+        ],
+        "test_dataset": "Wednesday-workingHours.pcap_ISCX.csv",
+        "protocol": "Dual-Phase: Full 100% test evaluation for metrics + 5,000 samples (batch_size=1) for latency"
+    },
+    "default_metrics_t_0_50": {
+        "threshold": 0.5,
+        "accuracy": 0.7740705171780401,
+        "precision": 0.7046775354865255,
+        "recall": 0.6531822678102518,
+        "f1": 0.6779534523173851,
+        "f2": 0.6628702972053345,
+        "mcc": 0.5052014928314437,
+        "roc_auc": 0.8371557609861959,
+        "tn": 370776,
+        "fp": 68907,
+        "fn": 87302,
+        "tp": 164421
+    },
+    "calibrated_metrics": {
+        "threshold": 0.3397630613015025,
+        "accuracy": 0.5089527715987423,
+        "precision": 0.4233936131966478,
+        "recall": 0.9637657266121888,
+        "f1": 0.5883278748952671,
+        "f2": 0.7677832451202176,
+        "mcc": 0.27119195171859484,
+        "roc_auc": 0.8371557609861959,
+        "tn": 109291,
+        "fp": 330392,
+        "fn": 9121,
+        "tp": 242602
+    },
+    "latency_benchmark_ms": {
+        "n_samples": 5000,
+        "mean_latency_ms": 0.16534017459198366,
+        "p50_latency_ms": 0.16132000018842518,
+        "p90_latency_ms": 0.18473290128895317,
+        "p95_latency_ms": 0.20212500021443702,
+        "p99_latency_ms": 0.2543359906121624,
+        "throughput_fps": 6048.136833457075
+    },
+    "hardware_profile": {
+        "peak_ram_mb": 278.76953125,
+        "avg_ram_mb": 268.1357421875,
+        "peak_cpu_pct": 103.2,
+        "avg_cpu_pct": 99.85714285714285
+    }
+}

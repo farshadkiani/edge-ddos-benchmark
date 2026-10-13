@@ -1,0 +1,19 @@
+=== RANDOM FOREST REAL-TIME BENCHMARK REPORT ===
+              precision    recall  f1-score   support
+
+      BENIGN       0.98      0.96      0.97     33777
+        DDoS       0.89      0.94      0.91     11366
+
+    accuracy                           0.95     45143
+   macro avg       0.93      0.95      0.94     45143
+weighted avg       0.96      0.95      0.95     45143
+
+MCC: 0.880311
+ROC-AUC: 0.974548
+
+=== LATENCY (Batch Size = 1, Pure Inference) ===
+Mean Latency: 17.8202 ms
+P50 (Median): 15.7004 ms
+P95: 28.0342 ms
+P99: 35.3878 ms
+Throughput: 56.12 samples/sec

@@ -1,0 +1,107 @@
+{
+    "model_type": "LogisticRegression",
+    "solver": "lbfgs",
+    "max_iter": 300,
+    "tol": 0.0001,
+    "random_state": 42,
+    "beta": 2.0,
+    "dataset": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+    "dataset_type": "Friday training / Wednesday testing",
+    "temporal_split_method": "contiguous 80/20 split on Friday clean rows",
+    "target_validation_ratio": 0.2,
+    "split_index": 180568,
+    "label_mapping": {
+        "BENIGN": 0,
+        "ALL_NON_BENIGN": 1
+    },
+    "n_samples": 225711,
+    "n_features": 4,
+    "n_train": 180568,
+    "n_validation": 45143,
+    "n_benign": 97686,
+    "n_attack": 128025,
+    "n_train_benign": 63909,
+    "n_train_attack": 116659,
+    "n_val_benign": 33777,
+    "n_val_attack": 11366,
+    "features": [
+        "Packet_Count",
+        "Packet_Size",
+        "Flow_Rate",
+        "Flow_Duration"
+    ],
+    "raw_required_columns": [
+        "Total Fwd Packets",
+        "Total Backward Packets",
+        "Average Packet Size",
+        "Flow Packets/s",
+        "Flow Duration",
+        "Label"
+    ],
+    "best_threshold": 0.51,
+    "calibration": {
+        "threshold": 0.51,
+        "f2_score": 0.797606743045143,
+        "precision": 0.47173791381462826,
+        "recall": 0.9641034664789724,
+        "tp": 10958,
+        "fp": 12271,
+        "fn": 408,
+        "tn": 21506
+    },
+    "validation_metrics_default_0_50": {
+        "threshold": 0.5,
+        "accuracy": 0.7168996300644618,
+        "precision": 0.4697190337502142,
+        "recall": 0.9648953017772304,
+        "f1": 0.6318488218010025,
+        "f2": 0.7968813579026914,
+        "specificity": 0.6334487965183409,
+        "fpr": 0.3665512034816591,
+        "fnr": 0.03510469822276966,
+        "mcc": 0.5197112232112928,
+        "tn": 21396,
+        "fp": 12381,
+        "fn": 399,
+        "tp": 10967,
+        "confusion_matrix": [
+            [
+                21396,
+                12381
+            ],
+            [
+                399,
+                10967
+            ]
+        ]
+    },
+    "validation_metrics_calibrated": {
+        "threshold": 0.51,
+        "accuracy": 0.7191369647564406,
+        "precision": 0.47173791381462826,
+        "recall": 0.9641034664789724,
+        "f1": 0.63350195114901,
+        "f2": 0.797606743045143,
+        "specificity": 0.6367054504544513,
+        "fpr": 0.36329454954554874,
+        "fnr": 0.035896533521027625,
+        "mcc": 0.5217646437992071,
+        "tn": 21506,
+        "fp": 12271,
+        "fn": 408,
+        "tp": 10958,
+        "confusion_matrix": [
+            [
+                21506,
+                12271
+            ],
+            [
+                408,
+                10958
+            ]
+        ]
+    },
+    "valid_rows": 225711,
+    "dropped_rows": 34,
+    "training_time_seconds": 3.926553726196289
+}

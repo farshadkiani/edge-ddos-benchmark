@@ -1,0 +1,60 @@
+{
+    "experiment": {
+        "model": "Logistic Regression",
+        "study": "Cross-Day Ablation (without Flow_Duration)",
+        "removed_feature": "Flow_Duration",
+        "ablation_name": "without_flow_duration",
+        "features_used": [
+            "Packet_Count",
+            "Packet_Size",
+            "Flow_Rate"
+        ],
+        "test_dataset": "Wednesday-workingHours.pcap_ISCX.csv",
+        "threshold_calibration_source": "Friday last-20% validation partition (leak-free)",
+        "protocol": "Dual-Phase Gold Standard: Phase 1 = qualitative metrics on 100% of the test dataset (vectorized); Phase 2 = pure single-sample inference latency (batch_size=1) on 5,000 samples with time.perf_counter(), percentiles computed directly from the raw latency array."
+    },
+    "default_metrics_t_0_50": {
+        "threshold": 0.5,
+        "accuracy": 0.6518167328602876,
+        "precision": 0.5168985533103446,
+        "recall": 0.6675472642547562,
+        "f1": 0.5826424645897262,
+        "f2": 0.6307794642408026,
+        "mcc": 0.2992022518531251,
+        "roc_auc": 0.7063135634300524,
+        "tn": 282633,
+        "fp": 157050,
+        "fn": 83686,
+        "tp": 168037
+    },
+    "calibrated_metrics": {
+        "threshold": 0.47611717804929987,
+        "accuracy": 0.6589977524059669,
+        "precision": 0.5230180947158812,
+        "recall": 0.7199620217461257,
+        "f1": 0.605887672528931,
+        "f2": 0.6695386884310796,
+        "mcc": 0.33110051529348156,
+        "roc_auc": 0.7063135634300524,
+        "tn": 274404,
+        "fp": 165279,
+        "fn": 70492,
+        "tp": 181231
+    },
+    "latency_benchmark_ms": {
+        "n_samples": 5000,
+        "batch_size": 1,
+        "mean_latency_ms": 0.17609591840073335,
+        "p50_latency_ms": 0.1623229998131137,
+        "p90_latency_ms": 0.22844300008273424,
+        "p95_latency_ms": 0.2720439998142865,
+        "p99_latency_ms": 0.36736399000119513,
+        "throughput_fps": 5678.72332920486
+    },
+    "hardware_profile": {
+        "peak_ram_mb": 240.3515625,
+        "avg_ram_mb": 223.86552526595744,
+        "peak_cpu_pct": 111.4,
+        "avg_cpu_pct": 99.8595744680851
+    }
+}

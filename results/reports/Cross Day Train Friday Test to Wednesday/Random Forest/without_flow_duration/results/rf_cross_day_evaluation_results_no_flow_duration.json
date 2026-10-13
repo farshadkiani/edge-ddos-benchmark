@@ -1,0 +1,63 @@
+{
+    "ablation_scenario": "without_flow_duration",
+    "active_features": [
+        "Packet_Count",
+        "Packet_Size",
+        "Flow_Rate"
+    ],
+    "threshold_calibration": {
+        "default_threshold": 0.5,
+        "optimal_threshold": 0.08,
+        "friday_val_f2": 0.9440380144947355
+    },
+    "realtime_latency_batch_size_1": {
+        "n_samples_evaluated": 5000,
+        "mean_latency_ms": 14.642666916802316,
+        "p50_latency_ms": 13.829667999971207,
+        "p90_latency_ms": 16.822392200083417,
+        "p95_latency_ms": 20.448074299679323,
+        "p99_latency_ms": 27.886928979773998,
+        "min_latency_ms": 12.78628000000026,
+        "max_latency_ms": 80.40999800005011,
+        "throughput_samples_per_sec": 68.29357013185282
+    },
+    "metrics_standard_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.7734818615979613,
+        "precision": 0.9592100815991502,
+        "recall": 0.3946043865677749,
+        "f1": 0.5591733797195436,
+        "f2": 0.4472568254045443,
+        "specificity": 0.9903930786498455,
+        "false_positive_rate": 0.009606921350154543,
+        "false_negative_rate": 0.6053956134322251,
+        "mcc": 0.5191226637563048,
+        "tn": 435459,
+        "fp": 4224,
+        "fn": 152392,
+        "tp": 99331
+    },
+    "metrics_calibrated_threshold": {
+        "threshold": 0.08,
+        "accuracy": 0.7993017127418622,
+        "precision": 0.9296489292913925,
+        "recall": 0.4854820576586168,
+        "f1": 0.6378602111812265,
+        "f2": 0.5367739362426396,
+        "specificity": 0.9789666646197374,
+        "false_positive_rate": 0.0210333353802626,
+        "false_negative_rate": 0.5145179423413831,
+        "mcc": 0.5695154261064787,
+        "tn": 430435,
+        "fp": 9248,
+        "fn": 129516,
+        "tp": 122207
+    },
+    "roc_auc": 0.7822278904395549,
+    "pr_auc": 0.7240857382852902,
+    "system_profile": {
+        "peak_memory_mb": 601.69140625,
+        "avg_cpu_percent": 99.91702127659575,
+        "total_inference_time_sec": 8.373567647000982
+    }
+}

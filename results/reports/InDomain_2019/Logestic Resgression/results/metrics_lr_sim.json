@@ -1,0 +1,76 @@
+{
+    "model_name": "Logistic Regression Hybrid",
+    "training_time_seconds": 1.9281494617462158,
+    "inference_total_time_seconds": 0.555535078048706,
+    "pure_model_interface_latency": {
+        "n_samples_evaluated": 5000,
+        "mean_latency_ms": 0.2719451824,
+        "std_latency_ms": 0.4634486248694938,
+        "p50_latency_ms": 0.1724715,
+        "p90_latency_ms": 0.379757,
+        "p95_latency_ms": 0.46627300000000005,
+        "p99_latency_ms": 1.5316510300000057,
+        "throughput_samples_per_sec": 3677.2116761719844
+    },
+    "overall_accuracy": 0.9509517803955242,
+    "balanced_accuracy": 0.9716833871850992,
+    "precision": 0.999995482558724,
+    "recall": 0.9509282110431662,
+    "f1_score": 0.9748448064877137,
+    "f2_score": 0.9603526302694488,
+    "macro_f1_score": 0.4986530704524478,
+    "mcc": 0.10349705479258278,
+    "roc_auc": 0.9966685420718044,
+    "class_0_benign": {
+        "precision": 0.011359210697130988,
+        "recall": 0.9924385633270322,
+        "f1_score": 0.02246133441718185
+    },
+    "class_1_ddos": {
+        "precision": 0.999995482558724,
+        "recall": 0.9509282110431662,
+        "f1_score": 0.9748448064877137
+    },
+    "confusion_matrix": {
+        "tn": 525,
+        "fp": 4,
+        "fn": 45693,
+        "tp": 885453
+    },
+    "resource_usage": {
+        "inference": {
+            "max_cpu_percent": 109.4,
+            "max_memory_mb": 860.58203125
+        },
+        "summary": {
+            "avg_cpu_percent": 88.175,
+            "max_cpu_percent": 109.4,
+            "avg_memory_mb": 860.56494140625,
+            "max_memory_mb": 860.58203125
+        }
+    },
+    "feature_columns": [
+        "Packet_Count",
+        "Packet_Size",
+        "Flow_Rate",
+        "Flow_Duration"
+    ],
+    "raw_required_columns": [
+        "Total Fwd Packets",
+        "Total Backward Packets",
+        "Average Packet Size",
+        "Flow Packets/s",
+        "Flow Duration",
+        "Label"
+    ],
+    "file_path": "DrDoS_DNS.csv",
+    "model_path": "results/logistic_regression_attack_detector_sim.pkl",
+    "test_ratio": 0.2,
+    "random_state": 42,
+    "latency_sample_limit": 5000,
+    "num_inference_runs": 5,
+    "train_sampling_ratio_majority_to_minority": 20,
+    "scaling": "StandardScaler",
+    "solver": "saga",
+    "max_iter": 5000
+}

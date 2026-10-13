@@ -1,0 +1,46 @@
+{
+    "model": "LSTM (TFLite)",
+    "dataset": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+    "model_path": "results/lstm_attack_detector_final.tflite",
+    "evaluation_protocol": {
+        "batch_size": 1,
+        "sequence_length": 10,
+        "latency_scope": "pure_model_inference",
+        "feature_extraction_in_latency": false,
+        "preprocessing_in_latency": false,
+        "inference_in_latency": true,
+        "warmup_samples": 100,
+        "number_of_evaluated_samples": 45133
+    },
+    "classification_metrics": {
+        "accuracy": 0.8713801431325194,
+        "precision": 0.6760992322822156,
+        "recall": 0.9383585769637196,
+        "f1_score": 0.7859276468635911,
+        "mcc": 0.7165736427333674,
+        "roc_auc": 0.9754808588389488
+    },
+    "latency_metrics_ms": {
+        "mean": 0.06829472612118398,
+        "median": 0.05331000011210563,
+        "p50": 0.05331000011210563,
+        "p90": 0.09511799999017967,
+        "p95": 0.10762099982457585,
+        "p99": 0.17820199993366262,
+        "min": 0.04870799966738559,
+        "max": 8.202855000035925,
+        "std": 0.06767475124659673
+    },
+    "resource_metrics": {
+        "peak_rss_mb": 560.53125,
+        "average_cpu_percent": 25.32162162162162,
+        "peak_cpu_percent": 39.4
+    },
+    "throughput_samples_per_second": 14642.419067990308,
+    "confusion_matrix": {
+        "TN": 28672,
+        "FP": 5105,
+        "FN": 700,
+        "TP": 10656
+    }
+}

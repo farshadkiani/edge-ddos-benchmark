@@ -1,0 +1,80 @@
+{
+    "experiment": {
+        "model": "Logistic Regression",
+        "study": "Cross-Day Ablation (without Flow_Rate)",
+        "removed_feature": "Flow_Rate",
+        "ablation_name": "without_flow_rate",
+        "used_features": [
+            "Packet_Count",
+            "Packet_Size",
+            "Flow_Duration"
+        ],
+        "n_features": 3,
+        "batch_size": 1,
+        "inference_mode": "Pure Model Single-Sample Inference"
+    },
+    "wednesday_dataset_statistics": {
+        "n_rows_clean": 691406,
+        "n_benign": 439683,
+        "n_attack": 251723
+    },
+    "threshold_calibration": {
+        "default_threshold": 0.5,
+        "optimal_threshold": 0.3,
+        "source": "recalibrated_on_friday"
+    },
+    "inference_latency_profile_ms": {
+        "mean": 0.17202728371081852,
+        "p50": 0.15861700012465008,
+        "p90": 0.21462399990923586,
+        "p95": 0.2662310001824153,
+        "p99": 0.35254200020062854,
+        "total_samples": 691406,
+        "total_inference_time_sec": 118.94069612136218,
+        "percentile_method": "np.percentile over single-sample latency array",
+        "benchmark_repeated_runs_sec": [
+            28.064704084999903,
+            31.455613151000307,
+            28.440341979000095
+        ]
+    },
+    "resource_usage": {
+        "peak_memory_mb": 250.9296875
+    },
+    "discrimination_metrics": {
+        "roc_auc": 0.8371360763684224,
+        "average_precision_pr_auc": 0.802004274288195
+    },
+    "metrics_default_threshold": {
+        "accuracy": 0.7740705171780401,
+        "precision": 0.7046775354865255,
+        "recall": 0.6531822678102518,
+        "f1": 0.6779534523173851,
+        "f2": 0.6628702972053345,
+        "mcc": 0.5052014928314437,
+        "roc_auc": 0.8371360763684224,
+        "specificity": 0.8432802723780541,
+        "fpr": 0.1567197276219458,
+        "fnr": 0.34681773218974826,
+        "tn": 370776,
+        "fp": 68907,
+        "fn": 87302,
+        "tp": 164421
+    },
+    "metrics_calibrated_threshold": {
+        "accuracy": 0.4936159072961473,
+        "precision": 0.4171932175089797,
+        "recall": 0.9846617114844491,
+        "f1": 0.5860723232853456,
+        "f2": 0.7740801119293446,
+        "mcc": 0.2728095877850471,
+        "roc_auc": 0.8371360763684224,
+        "specificity": 0.21248717826252095,
+        "fpr": 0.787512821737479,
+        "fnr": 0.015338288515550825,
+        "tn": 93427,
+        "fp": 346256,
+        "fn": 3861,
+        "tp": 247862
+    }
+}

@@ -1,0 +1,17 @@
+Logistic Regression Ablation Training Summary
+=======================================================
+Dataset: Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+Experiment: Leave-one-feature-out ablation
+Removed feature: Flow_Rate
+Used features: Packet_Count, Packet_Size, Flow_Duration
+Samples: 225711
+Features: 3
+Benign samples: 97686
+Attack samples: 128025
+Solver: lbfgs
+Max iterations: 300
+Best threshold: 0.33976306
+Best F2-score: 0.897455
+Precision: 0.651254
+Recall: 0.991127
+Training time: 15.44 seconds

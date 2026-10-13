@@ -1,0 +1,76 @@
+{
+    "model": "Logistic Regression",
+    "dataset": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+    "model_path": "results/logistic_regression_attack_detector.pkl",
+    "features": [
+        "Packet_Count",
+        "Packet_Size",
+        "Flow_Rate",
+        "Flow_Duration"
+    ],
+    "data_split": {
+        "strategy": "chronological",
+        "train_ratio": 0.7999964556446075,
+        "test_ratio": 0.20000354435539253,
+        "shuffle": false,
+        "random_sampling": false,
+        "split_index": 180568,
+        "total_valid_samples": 225711,
+        "training_samples": 180568,
+        "test_samples": 45143,
+        "train_class_distribution": {
+            "0": 63909,
+            "1": 116659
+        },
+        "test_class_distribution": {
+            "0": 33777,
+            "1": 11366
+        },
+        "label_mapping": {
+            "BENIGN": 0,
+            "NON_BENIGN": 1
+        }
+    },
+    "evaluation_protocol": {
+        "batch_size": 1,
+        "latency_scope": "pure_model_inference",
+        "feature_extraction_in_latency": false,
+        "preprocessing_in_latency": false,
+        "model_inference_in_latency": true,
+        "warmup_samples": 100,
+        "evaluated_samples": 45143,
+        "benchmark_wall_time_seconds": 49.69784598200022
+    },
+    "classification_metrics": {
+        "accuracy": 0.6958110892054139,
+        "precision": 0.41813148788927335,
+        "recall": 0.5315854302305121,
+        "f1_score": 0.46808180973039976,
+        "mcc": 0.2629801951931105,
+        "roc_auc": 0.8150704011708679
+    },
+    "latency_metrics_ms": {
+        "mean": 1.094498706758182,
+        "median": 0.790317000792129,
+        "p50": 0.790317000792129,
+        "p90": 1.6032138009904884,
+        "p95": 2.066930400178535,
+        "p99": 6.941531160046003,
+        "min": 0.5810349994135322,
+        "max": 22.953214998779004,
+        "std": 1.149724372329851
+    },
+    "resource_metrics": {
+        "peak_rss_mb": 226.6328125,
+        "average_memory_mb": 224.95299865229111,
+        "average_cpu_percent": 25.423180592991915,
+        "peak_cpu_percent": 63.5
+    },
+    "throughput_samples_per_second": 913.6602846813043,
+    "confusion_matrix": {
+        "TN": 25369,
+        "FP": 8408,
+        "FN": 5324,
+        "TP": 6042
+    }
+}

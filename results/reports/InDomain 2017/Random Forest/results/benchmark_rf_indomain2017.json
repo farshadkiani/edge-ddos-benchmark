@@ -1,0 +1,45 @@
+{
+    "model": "Random Forest",
+    "dataset": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+    "model_path": "results/random_forest_attack_detector.pkl",
+    "evaluation_protocol": {
+        "batch_size": 1,
+        "latency_scope": "pure_model_inference",
+        "feature_extraction_in_latency": false,
+        "preprocessing_in_latency": false,
+        "inference_in_latency": true,
+        "warmup_samples": 100,
+        "number_of_evaluated_samples": 45143
+    },
+    "classification_metrics": {
+        "accuracy": 0.9538355891278825,
+        "precision": 0.8866211262912362,
+        "recall": 0.9363892310399436,
+        "f1_score": 0.9108258451005563,
+        "mcc": 0.880310710227452,
+        "roc_auc": 0.9745483557888148
+    },
+    "latency_metrics_ms": {
+        "mean": 17.820187982410125,
+        "median": 15.700434000336827,
+        "p50": 15.700434000336827,
+        "p90": 24.86186040005123,
+        "p95": 28.034240600209163,
+        "p99": 35.38782802002063,
+        "min": 13.382266000007803,
+        "max": 96.29646500025046,
+        "std": 5.069372903642803
+    },
+    "resource_metrics": {
+        "peak_rss_mb": 664.68359375,
+        "average_cpu_percent": 25.884924996286948,
+        "peak_cpu_percent": 80.5
+    },
+    "throughput_samples_per_second": 56.116130816749845,
+    "confusion_matrix": {
+        "TN": 32416,
+        "FP": 1361,
+        "FN": 723,
+        "TP": 10643
+    }
+}

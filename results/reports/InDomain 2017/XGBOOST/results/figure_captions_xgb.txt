@@ -1,0 +1,10 @@
+Standardized Figure Captions (Times New Roman, 10pt, 300 DPI)
+=================================================================
+
+Figure 1: Comprehensive classification performance metrics (Accuracy, Precision, Recall, F1-Score, MCC, and ROC-AUC) for XGBoost.
+Figure 2: Confusion matrix of the XGBoost model evaluated on single-sample test network flows.
+Figure 3: Receiver Operating Characteristic (ROC) curve and area under the curve (AUC) metric for XGBoost.
+Figure 4: Single-sample pure inference latency percentiles (P50, P90, P95, and P99) in milliseconds [ms].
+Figure 5: Per-sample pure inference latency distribution with Kernel Density Estimation (KDE).
+Figure 6: Relative feature importance scores based on Gain metric for XGBoost.
+Figure 7: Time-series profiling of CPU utilization [%] and Resident Set Size (RSS) memory consumption [MB].

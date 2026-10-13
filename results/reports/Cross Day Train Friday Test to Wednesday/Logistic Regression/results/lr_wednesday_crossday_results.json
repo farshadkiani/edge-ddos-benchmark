@@ -1,0 +1,65 @@
+{
+    "model": "Logistic Regression",
+    "features": [
+        "Packet_Count",
+        "Packet_Size",
+        "Flow_Rate",
+        "Flow_Duration"
+    ],
+    "friday_calibration": {
+        "optimal_threshold": 0.51,
+        "f2_score": 0.797606743045143
+    },
+    "pure_realtime_latency_batch_size_1": {
+        "n_samples_evaluated": 50000,
+        "mean_latency_ms": 0.20879773634158483,
+        "std_latency_ms": 0.17121625969113718,
+        "p50_latency_ms": 0.1672060006967513,
+        "p90_latency_ms": 0.32084169952213404,
+        "p95_latency_ms": 0.3690380498937884,
+        "p99_latency_ms": 0.5784369997763893,
+        "throughput_samples_per_sec": 4789.323953033857
+    },
+    "wednesday_stream_stats": {
+        "total_inference_time_sec": 0.14172389599934831,
+        "n_inference_samples": 691406,
+        "peak_memory_mb": 164.97265625,
+        "avg_memory_mb": 163.2998046875,
+        "peak_cpu_percent": 106.6,
+        "avg_cpu_percent": 100.05
+    },
+    "metrics_default_threshold_0_50": {
+        "threshold": 0.5,
+        "accuracy": 0.6612583633928546,
+        "precision": 0.525163132957311,
+        "recall": 0.7260838302419723,
+        "f1": 0.609491923328309,
+        "f2": 0.6744747479742361,
+        "specificity": 0.6241451227361531,
+        "mcc": 0.3370466497580489,
+        "roc_auc": 0.7071365923969276,
+        "false_positive_rate": 0.3758548772638469,
+        "false_negative_rate": 0.2739161697580277,
+        "tn": 274426,
+        "fp": 165257,
+        "fn": 68951,
+        "tp": 182772
+    },
+    "metrics_calibrated_threshold": {
+        "threshold": 0.51,
+        "accuracy": 0.6607159903153863,
+        "precision": 0.524751903326055,
+        "recall": 0.7217775094051795,
+        "f1": 0.6076938385407695,
+        "f2": 0.6713629457080188,
+        "specificity": 0.6257576481237619,
+        "mcc": 0.33444707335458196,
+        "roc_auc": 0.7071365923969276,
+        "false_positive_rate": 0.3742423518762381,
+        "false_negative_rate": 0.2782224905948205,
+        "tn": 275135,
+        "fp": 164548,
+        "fn": 70035,
+        "tp": 181688
+    }
+}

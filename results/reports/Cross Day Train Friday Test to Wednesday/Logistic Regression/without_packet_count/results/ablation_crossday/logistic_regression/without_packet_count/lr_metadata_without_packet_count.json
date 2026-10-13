@@ -1,0 +1,55 @@
+{
+    "model_type": "LogisticRegression",
+    "experiment_type": "leave_one_feature_out_ablation",
+    "ablation_configuration": "without_packet_count",
+    "removed_feature": "Packet_Count",
+    "solver": "lbfgs",
+    "max_iter": 300,
+    "tol": 0.0001,
+    "C": 1.0,
+    "class_weight": null,
+    "random_state": 42,
+    "beta": 2.0,
+    "dataset": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+    "dataset_type": "Friday training / Wednesday testing",
+    "label_mapping": {
+        "BENIGN": 0,
+        "ALL_NON_BENIGN": 1
+    },
+    "n_samples": 225711,
+    "n_features": 3,
+    "n_benign": 97686,
+    "n_attack": 128025,
+    "all_features": [
+        "Packet_Count",
+        "Packet_Size",
+        "Flow_Rate",
+        "Flow_Duration"
+    ],
+    "used_features": [
+        "Packet_Size",
+        "Flow_Rate",
+        "Flow_Duration"
+    ],
+    "raw_required_columns": [
+        "Total Fwd Packets",
+        "Total Backward Packets",
+        "Average Packet Size",
+        "Flow Packets/s",
+        "Flow Duration",
+        "Label"
+    ],
+    "best_threshold": 0.4231386387395109,
+    "calibration": {
+        "threshold": 0.4231386387395109,
+        "f2_score": 0.9051389052125386,
+        "precision": 0.6586364830680934,
+        "recall": 0.9985705916813122,
+        "tp": 127842,
+        "fp": 66259,
+        "fn": 183
+    },
+    "valid_rows": 225711,
+    "dropped_rows": 34,
+    "training_time_seconds": 4.217135429382324
+}

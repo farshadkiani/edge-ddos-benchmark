@@ -1,0 +1,88 @@
+{
+    "evaluation_info": {
+        "dataset_name": "CICIDS2017 Wednesday Evaluation Set",
+        "ablation_experiment": "WITHOUT Packet_Size",
+        "features_utilized": [
+            "Packet_Count",
+            "Flow_Rate",
+            "Flow_Duration"
+        ],
+        "evaluation_mode": "Real-Time (Batch Size = 1 for Latency & Resources, Full Set for Metrics)",
+        "total_test_samples": 691396,
+        "latency_benchmark_samples": 5000,
+        "default_threshold": 0.5,
+        "calibrated_threshold": 0.22
+    },
+    "edge_hardware_resources": {
+        "cpu_usage_percent": 99.8,
+        "ram_before_benchmark_mb": 698.23828125,
+        "ram_after_benchmark_mb": 698.25390625,
+        "peak_ram_mb": 698.25390625,
+        "model_file_size_mb": 0.0824127197265625
+    },
+    "latency_analysis_ms": {
+        "mean": 1.8949155807495117,
+        "p50_median": 1.1791685223579407,
+        "p90": 2.613043141365053,
+        "p95": 2.990723121166231,
+        "p99_tail": 23.271694946289074,
+        "min": 0.9382339715957642,
+        "max": 46.396541595458984
+    },
+    "metrics_standard_threshold_050": {
+        "threshold": 0.5,
+        "accuracy": 0.6440129824297508,
+        "precision": 0.8051707210646886,
+        "recall": 0.029321913373033057,
+        "f1_score": 0.05658323431331212,
+        "f2_score": 0.036321709664497825,
+        "specificity": 0.9959378902047659,
+        "false_positive_rate": 0.004062109795234185,
+        "false_negative_rate": 0.970678086626967,
+        "mcc": 0.10626190884545836,
+        "roc_auc": 0.3539261147063775,
+        "pr_auc": 0.4149208784315191,
+        "confusion_matrix": [
+            [
+                437887,
+                1786
+            ],
+            [
+                244342,
+                7381
+            ]
+        ],
+        "tn": 437887,
+        "fp": 1786,
+        "fn": 244342,
+        "tp": 7381
+    },
+    "metrics_calibrated_threshold_opt": {
+        "threshold": 0.22,
+        "accuracy": 0.2935712674068117,
+        "precision": 0.22548680777036822,
+        "recall": 0.38619037592909666,
+        "f1_score": 0.28472808004123906,
+        "f2_score": 0.33801060766319174,
+        "specificity": 0.24054467752170364,
+        "false_positive_rate": 0.7594553224782964,
+        "false_negative_rate": 0.6138096240709033,
+        "mcc": -0.37070552677933777,
+        "roc_auc": 0.3539261147063775,
+        "pr_auc": 0.4149208784315191,
+        "confusion_matrix": [
+            [
+                105761,
+                333912
+            ],
+            [
+                154510,
+                97213
+            ]
+        ],
+        "tn": 105761,
+        "fp": 333912,
+        "fn": 154510,
+        "tp": 97213
+    }
+}
