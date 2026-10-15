@@ -12,6 +12,6 @@
   "fp": 1380,
   "fn": 759,
   "tp": 10600,
-  "validation_total_inference_time_sec": 0.3567087650299072,
-  "validation_avg_latency_ms_per_sample": 0.00790070134509972
+  "validation_total_inference_time_sec": 0.5909590721130371,
+  "validation_avg_latency_ms_per_sample": 0.013089084411903632
 }

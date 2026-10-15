@@ -1,0 +1,122 @@
+{
+    "metadata": {
+        "model_type": "RandomForestClassifier",
+        "ablation_status": "Flow_Rate excluded",
+        "features_used": [
+            "Packet_Count",
+            "Packet_Size",
+            "Flow_Duration"
+        ],
+        "train_domain": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+        "test_domain": "Wednesday-workingHours.pcap_ISCX.csv",
+        "real_time_batch_size": 1,
+        "timestamp": "2026-10-15 01:51:57"
+    },
+    "friday_calibration_statistics": {
+        "n_rows_clean": 225745,
+        "n_benign": 97718,
+        "n_attack": 128027
+    },
+    "wednesday_test_statistics": {
+        "n_rows_clean": 692703,
+        "n_benign": 440031,
+        "n_attack": 252672
+    },
+    "threshold_calibration": {
+        "method": "Temporal Friday validation split (last 20%)",
+        "optimization_metric": "F2-score",
+        "default_threshold": 0.5,
+        "optimal_threshold": 0.09999999999999999,
+        "friday_validation_f2_score": 0.9440265903678449
+    },
+    "inference_performance": {
+        "batch_size": 1,
+        "benchmark_samples": 5000,
+        "total_inference_time_sec": 70.02464847800002,
+        "average_latency_ms": 14.000387166801739,
+        "latency_p50_ms": 13.531927500025631,
+        "latency_p90_ms": 15.191030099322234,
+        "latency_p95_ms": 16.692683300470893,
+        "latency_p99_ms": 21.31647183930912,
+        "n_total_test_samples": 692703,
+        "chunk_size": 25000,
+        "peak_memory_mb": 607.97265625,
+        "avg_cpu_percent": 99.90714285714286,
+        "prediction_time_runs_sec": [
+            13.593554496765137,
+            14.59086799621582,
+            13.803068161010742
+        ]
+    },
+    "discrimination_metrics": {
+        "roc_auc": 0.7762688928745504,
+        "average_precision_pr_auc": 0.7184465431683345
+    },
+    "evaluation_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.7733963906609326,
+        "precision": 0.9603806078565312,
+        "recall": 0.3950615818135765,
+        "f1": 0.5598313007731113,
+        "f2": 0.4477775973487095,
+        "specificity": 0.9906415684349512,
+        "false_positive_rate": 0.009358431565048826,
+        "false_negative_rate": 0.6049384181864235,
+        "mcc": 0.5198924266396816,
+        "tn": 435913,
+        "fp": 4118,
+        "fn": 152851,
+        "tp": 99821,
+        "confusion_matrix": [
+            [
+                435913,
+                4118
+            ],
+            [
+                152851,
+                99821
+            ]
+        ]
+    },
+    "evaluation_calibrated_threshold": {
+        "threshold": 0.09999999999999999,
+        "accuracy": 0.7968840902955524,
+        "precision": 0.9340341574218356,
+        "recall": 0.4768316236068896,
+        "f1": 0.631352790288815,
+        "f2": 0.5285786611844212,
+        "specificity": 0.9806627260352112,
+        "false_positive_rate": 0.019337273964788845,
+        "false_negative_rate": 0.5231683763931104,
+        "mcc": 0.5657148583630796,
+        "tn": 431522,
+        "fp": 8509,
+        "fn": 132190,
+        "tp": 120482,
+        "confusion_matrix": [
+            [
+                431522,
+                8509
+            ],
+            [
+                132190,
+                120482
+            ]
+        ]
+    },
+    "generated_figures": {
+        "confusion_matrix_default": "results/rf_wednesday_confusion_matrix_default_no_flow_rate.png",
+        "confusion_matrix_calibrated": "results/rf_wednesday_confusion_matrix_calibrated_no_flow_rate.png",
+        "confusion_matrix_comparison": "results/rf_wednesday_confusion_matrices_comparison_no_flow_rate.png",
+        "roc_pr_curves": "results/rf_wednesday_roc_pr_curves_no_flow_rate.png",
+        "metrics_default": "results/rf_wednesday_metrics_default_no_flow_rate.png",
+        "metrics_calibrated": "results/rf_wednesday_metrics_calibrated_no_flow_rate.png",
+        "metrics_all_comparison": "results/rf_wednesday_all_metrics_comparison_no_flow_rate.png",
+        "probability_distribution_comparison": "results/rf_probability_distribution_comparison_no_flow_rate.png",
+        "memory_usage": "results/rf_memory_usage_over_time_no_flow_rate.png",
+        "cpu_usage": "results/rf_cpu_usage_over_time_no_flow_rate.png",
+        "latency_percentiles": "results/rf_latency_percentiles_no_flow_rate.png",
+        "latency_stability": "results/rf_latency_stability_over_time_no_flow_rate.png",
+        "prediction_time_runs": "results/rf_prediction_time_runs_no_flow_rate.png"
+    }
+}
