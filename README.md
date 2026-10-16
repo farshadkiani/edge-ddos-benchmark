@@ -27,9 +27,9 @@ The experimental evaluations span **four baseline models** (Random Forest, XGBoo
 - **Docker Desktop** installed and running.
 - **Hardware Profile (Edge Simulator)**: Containers run with restricted resources (`--cpus="1.0" --memory="1g"`) to simulate Raspberry Pi 4 edge behavior.
 - **Datasets**:
-  - `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv` (CICIDS2017)
-  - `Wednesday-workingHours.pcap_ISCX.csv` (CICIDS2017)
-  - `DrDoS_DNS.csv` (CICDDoS2019)
+  - `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv` ([CICIDS2017 Dataset Official Download Page](https://www.unb.ca/cic/datasets/ids-2017.html))
+  - `Wednesday-workingHours.pcap_ISCX.csv` ([CICIDS2017 Dataset Official Download Page](https://www.unb.ca/cic/datasets/ids-2017.html))
+  - `DrDoS_DNS.csv` ([CICDDoS2019 Dataset Official Download Page](https://www.unb.ca/cic/datasets/ddos-2019.html))
 
 ---
 
